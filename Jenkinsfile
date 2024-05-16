@@ -11,7 +11,7 @@ pipeline {
         }
         stage('S3 Upload') {
             steps {
-                withAWS(region: 'us-east-1', credentials: '9dc47d93-f065-48df-9d1e-562ac8922093') {
+                withAWS(region: 'us-east-1', credentials: 'f2980eb1-8312-47c1-9835-b406849f32ba') {
                     sh 'ls -la'
                     sh 'aws s3 cp * s3://sk-reactjs/'
                 }
