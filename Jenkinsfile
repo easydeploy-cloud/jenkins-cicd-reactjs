@@ -14,7 +14,7 @@ pipeline {
             steps {
                 withAWS(region: 'us-east-1', credentials: 'f2980eb1-8312-47c1-9835-b406849f32ba') {
                     sh 'ls -la build'
-                    sh 'aws s3 cp build s3://sk-reactjs/' --recursive
+                    sh 'aws s3 cp build s3://sk-reactjs/ --recursive'
                 }
             }
         }
